@@ -1,18 +1,13 @@
-```markdown
-# Query Solutions
-
-## Database Query Solutions with Explanations
-
-### 1. How to Update Student Address
-To update the address for student with NIM '123456':
+### 1. Cara Memperbarui Alamat Mahasiswa
+Untuk memperbarui alamat mahasiswa dengan NIM '123456':
 ```sql
 UPDATE Mahasiswa
 SET Alamat = 'Jl. Raya No.5'
 WHERE NIM = '123456';
 ```
 
-### 2. How to Display Student Info with Teacher
-To show NIM, name, major for IT students with their teachers:
+### 2. Cara Menampilkan Info Mahasiswa dengan Dosen
+Untuk menampilkan NIM, nama, jurusan untuk mahasiswa Teknik Informatika beserta dosennya:
 ```sql
 SELECT 
 	m.NIM,
@@ -25,8 +20,8 @@ JOIN MataKuliah mk
 WHERE m.Jurusan = 'Teknik Informatika';
 ```
 
-### 3. How to Get 5 Oldest Students
-To display 5 students with highest age:
+### 3. Cara Mendapatkan 5 Mahasiswa Tertua
+Untuk menampilkan 5 mahasiswa dengan umur tertinggi:
 ```sql
 SELECT Nama, Umur
 FROM Mahasiswa
@@ -34,8 +29,8 @@ ORDER BY Umur DESC
 LIMIT 5;
 ```
 
-### 4. How to Get High Score Students
-To show students with scores above 70:
+### 4. Cara Mendapatkan Mahasiswa dengan Nilai Tinggi
+Untuk menampilkan mahasiswa dengan nilai di atas 70:
 ```sql
 SELECT 
 	m.Nama,
@@ -45,12 +40,4 @@ FROM Mahasiswa m
 JOIN MataKuliah mk 
 	ON m.NIM = mk.NIM
 WHERE mk.Nilai > 70;
-```
-
-## Query Techniques Used:
-- UPDATE with WHERE clause
-- JOIN operations
-- ORDER BY with DESC and LIMIT
-- Multiple table SELECT
-- Filtering with WHERE
 ```
